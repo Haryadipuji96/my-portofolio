@@ -87,13 +87,13 @@ export default function HomePage() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {[
         {
-          img: '/project1.jpg',
+          img: '/Project1.jpg',
           title: 'Website Desa Indrajaya',
           desc: 'Website desa berbasis Laravel dan Tailwind. Menampilkan berita, agenda, dan statistik penduduk.',
           aos: 'fade-right'
         },
         {
-          img: '/project2.jpg',
+          img: '/Project2.jpg',
           title: 'Aplikasi Booking Hotel',
           desc: 'Platform pemesanan hotel berbasis Next.js dan Firebase dengan login, dashboard admin dan filter pencarian.',
           aos: 'fade-left'
