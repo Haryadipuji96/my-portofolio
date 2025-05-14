@@ -4,6 +4,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaWhatsapp, FaFacebookF, FaInstagram, FaGithub } from 'react-icons/fa';
+
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,10 +19,10 @@ export default function HomePage() {
       {/* Navbar */}
       <nav className="fixed top-0 w-full bg-gray-900 text-indigo-700 shadow z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-bold">My Portfolio</h1>
+          <h1 className="text-xl font-bold">Puji Haryadi</h1>
           <div className="hidden md:flex space-x-6">
             <a href="#home" className="hover:text-indigo-400 transition">Home</a>
-            <a href="#about" className="hover:text-indigo-400 transition">Tentang</a>
+            <a href="#about" className="hover:text-indigo-400 transition">Aboutt</a>
             <a href="#projects" className="hover:text-indigo-400 transition">Proyek</a>
             <a href="#contact" className="hover:text-indigo-400 transition">Kontak</a>
           </div>
@@ -33,7 +35,7 @@ export default function HomePage() {
         {menuOpen && (
           <div className="md:hidden bg-gray-800 text-white px-4 pb-4 space-y-2">
             <a href="#home" className="block">Home</a>
-            <a href="#about" className="block">Tentang</a>
+            <a href="#about" className="block">About</a>
             <a href="#projects" className="block">Proyek</a>
             <a href="#contact" className="block">Kontak</a>
           </div>
@@ -44,7 +46,7 @@ export default function HomePage() {
       <section id="home" className="min-h-screen flex flex-col justify-center items-center text-white bg-gradient-to-br from-indigo-800 to-purple-800 px-4 pt-28 text-center">
         <Image src="/Foto Saya.jpg" alt="Profil" width={140} height={140} className="rounded-full border-4 border-white mb-6" />
         <h1 className="text-3xl md:text-4xl font-bold mb-2" data-aos="fade-down">Halo, saya Puji Haryadi</h1>
-        <p className="text-base md:text-lg" data-aos="fade-up">Frontend Developer | UI/UX Enthusiast</p>
+        <p className="text-base md:text-lg" data-aos="fade-up">Frontend & Backend Developer | UI/UX Enthusiast</p>
         <Link href="#contact">
           <button className="mt-6 bg-white text-indigo-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition" data-aos="fade-up">Hubungi Saya</button>
         </Link>
@@ -55,8 +57,9 @@ export default function HomePage() {
   <div className="max-w-6xl mx-auto px-4 text-center">
     <h2 className="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Tentang Saya</h2>
     <p className="text-base md:text-lg mb-10 max-w-2xl mx-auto text-gray-700" data-aos="fade-up" data-aos-delay="100">
-      Saya adalah seorang Frontend Developer yang fokus pada pembuatan website modern dan responsif.
-      Berpengalaman dengan Next.js, Tailwind CSS, dan Laravel.
+      Perjalanan saya dalam dunia pengembangan web dimulai dari rasa penasaran terhadap bagaimana website bekerja dan bagaimana pengguna berinteraksi dengan teknologi. 
+      Seiring waktu, saya mengembangkan keterampilan saya di dua dunia: frontend dan backend. Saya berkomitmen untuk membuat pengalaman digital yang tidak hanya fungsional, tetapi juga menyenangkan dan intuitif untuk digunakan. 
+      Dengan keahlian dalam React, Next.js, Tailwind di sisi frontend, serta Laravel dan Firebase di backend, saya selalu mencari cara untuk memadukan teknologi dan desain untuk menciptakan solusi yang efektif dan efisien.
     </p>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
@@ -83,7 +86,7 @@ export default function HomePage() {
      {/* Projects */}
 <section id="projects" className="py-20 bg-gradient-to-br from-blue-800 via-indigo-700 to-purple-800 text-white">
   <div className="max-w-6xl mx-auto px-4 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-10" data-aos="fade-up">Proyek Saya</h2>
+    <h2 className="text-3xl md:text-4xl font-bold mb-10" data-aos="fade-up">Project Saya</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {[
         {
@@ -160,9 +163,45 @@ export default function HomePage() {
 </section>``
 
       {/* Footer */}
-      <footer className="py-6 bg-gray-900 text-indigo-700 text-center">
-        <p>© {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
-      </footer>
+     <footer className="bg-gray-900 text-indigo-700 text-center mt-16">
+  <div className="flex justify-center flex-wrap gap-6 text-3xl py-6">
+    <a 
+      href="https://wa.me/6282127934276"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-green-500 transition-transform transform hover:scale-125 duration-300"
+    >
+      <FaWhatsapp />
+    </a>
+    <a 
+      href="https://facebook.com/fuji.haryadi.1"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-blue-500 transition-transform transform hover:scale-125 duration-300"
+    >
+      <FaFacebookF />
+    </a>
+    <a 
+      href="https://instagram.com/puji_haryadi86"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-pink-500 transition-transform transform hover:scale-125 duration-300"
+    >
+      <FaInstagram />
+    </a>
+    <a 
+      href="https://github.com/Haryadipuji96"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-white transition-transform transform hover:scale-125 duration-300"
+    >
+      <FaGithub />
+    </a>
+  </div>
+  <p className="pb-6 text-sm md:text-base">
+    © {new Date().getFullYear()} Puji Haryadi. All rights reserved.
+  </p>
+</footer>
     </div>
   );
 }
