@@ -51,7 +51,7 @@ export default function HomePage() {
 
       {/* Hero */}
       <section id="home" className="min-h-screen flex flex-col justify-center items-center text-white bg-gradient-to-br from-indigo-800 to-purple-800 px-4 pt-1 md:pt-28 text-center">
-        <Image src="/Foto Saya.jpg" alt="Profil" width={140} height={140} className="rounded-full border-4 border-white mb-6" />
+        <Image src="/Gambar Saya2.jpg" alt="Profil" width={140} height={140} className="rounded-full border-4 border-white mb-6" />
         <h1 className="text-3xl md:text-4xl font-bold mb-2" data-aos="fade-down">Halo, saya Puji Haryadi</h1>
         <p className="text-base md:text-lg" data-aos="fade-up">Frontend & Backend Developer | UI/UX Designer</p>
         <Link href="#contact">
@@ -62,7 +62,7 @@ export default function HomePage() {
       {/* About */}
 <section id="about" className="py-20 bg-gray-100 text-gray-800">
   <div className="max-w-6xl mx-auto px-4 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Tentang Saya</h2>
+    <h2 className="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">About Me</h2>
     <p className="text-base md:text-lg mb-10 max-w-2xl mx-auto text-gray-700 text-justify" data-aos="fade-up" data-aos-delay="100">
       Perjalanan saya dalam dunia pengembangan web dimulai dari rasa penasaran terhadap bagaimana website bekerja dan bagaimana pengguna berinteraksi dengan teknologi. 
       Seiring waktu, saya mengembangkan keterampilan saya di dua dunia: frontend dan backend. Saya berkomitmen untuk membuat pengalaman digital yang tidak hanya fungsional, tetapi juga menyenangkan dan intuitif untuk digunakan. 
@@ -91,23 +91,27 @@ export default function HomePage() {
 
 
      {/* Projects */}
-<section id="projects" className="py-20 bg-gradient-to-br from-blue-800 via-indigo-700 to-purple-800 text-white">
+     <section id="projects" className="py-20 bg-gradient-to-br from-blue-800 via-indigo-700 to-purple-800 text-white">
   <div className="max-w-6xl mx-auto px-4 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-10" data-aos="fade-up">Project Saya</h2>
+    <h2 className="text-3xl md:text-4xl font-bold mb-10" data-aos="fade-up">Project Me</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {[
         {
           img: '/Project1.jpg',
           title: 'Website Desa Indrajaya',
           desc: 'Website desa berbasis Laravel dan Tailwind. Menampilkan berita, agenda, dan statistik penduduk.',
-          aos: 'fade-right'
+          aos: 'fade-right',
+          github: 'https://github.com/Haryadipuji96/Sistem-Informasi.git',
+          demo: 'https://mi23a-desa-indrajaya.politekniklp3i-tasikmalaya.ac.id/'
         },
         {
           img: '/Project2.jpg',
           title: 'Aplikasi Booking Hotel',
           desc: 'Platform pemesanan hotel berbasis Next.js dan Firebase dengan login, dashboard admin dan filter pencarian.',
-          aos: 'fade-left'
-        }
+          aos: 'fade-left',
+          github: 'https://github.com/Haryadipuji96/tugasdoang.git',
+          demo: 'https://booking-hotel-demo.com '
+        },
       ].map((project, index) => (
         <div
           key={index}
@@ -125,8 +129,12 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
             <p className="text-gray-600 mb-4">{project.desc}</p>
             <div className="flex gap-4">
-              <Link href="https://github.com/Haryadipuji96/Sistem-Informasi.git"><span className="text-indigo-600 hover:underline">GitHub</span></Link>
-              <Link href="https://github.com/Haryadipuji96/tugasdoang.git"><span className="text-indigo-600 hover:underline">Live Demo</span></Link>
+              <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                <span className="text-indigo-600 hover:underline cursor-pointer">GitHub</span>
+              </Link>
+              <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                <span className="text-indigo-600 hover:underline cursor-pointer">Live Demo</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -136,10 +144,11 @@ export default function HomePage() {
 </section>
 
 
+
      {/* Contact */}
 <section id="contact" className="pt-20 pb-10 md:pb-16 bg-white text-gray-800">
   <div className="max-w-2xl mx-auto px-4 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Kontak Saya</h2>
+    <h2 className="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Contact</h2>
     <p className="text-gray-600 mb-10" data-aos="fade-up" data-aos-delay="100">
       Tertarik bekerja sama atau punya pertanyaan? Silakan kirim pesan melalui form di bawah.
     </p>
